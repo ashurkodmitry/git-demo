@@ -2,6 +2,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class Task {
 
@@ -11,30 +13,26 @@ public class Task {
 
         WebDriver driver = new ChromeDriver();
         driver.get("https://cloud.google.com/");
+        driver.manage().window().maximize();
 
-        //risky point
 
+        WebDriverWait waitProducts = new WebDriverWait(driver,10);
+        waitProducts.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@data-label='Footer See all products']")));
         WebElement clickProducts = driver.findElement(By.xpath("//*[@data-label='Footer See all products']"));
         clickProducts.click();
-        Thread.sleep(10000); //заменить вейтом
 
-        //risky point
 
-        WebElement clickPricing = driver.findElement(By.xpath("//*[@data-label='Footer GCP pricing']")); //заглушка. решение неверно!
+        WebDriverWait waitPricing = new WebDriverWait(driver,10);
+        waitPricing.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@track-name='seePricing']")));
+        WebElement clickPricing = driver.findElement(By.xpath("//*[@track-name='seePricing']"));
         clickPricing.click();
-        Thread.sleep(10000); //заменить вейтом
 
-        //risky point
 
-        WebElement openList = driver.findElement(By.xpath("//*[@class='cloud-jump-menu__toggle']"));
-        openList.click();
-        Thread.sleep(10000); //заменить вейтом
-
-        //risky point
-
+        WebDriverWait waitCalculator = new WebDriverWait(driver,10);
+        waitCalculator.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//a[text()='Calculators']")));
         WebElement clickCalculator = driver.findElement(By.xpath("//a[text()='Calculators']"));
         clickCalculator.click();
-        Thread.sleep(10000); //заменить вейтом
+
 
         //risky point
 
@@ -42,8 +40,10 @@ public class Task {
         //clickComputeEngine.click();
 
         //risky point
-
-        WebElement instancesNum = driver.findElement(By.xpath("//*[@id='input_51']")); //не сработал
+        //driver.switchTo().window("ComputeEngineForm"); посмотреть название формы
+        WebDriverWait wait = new WebDriverWait(driver,10);
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.id("input_51")));
+        WebElement instancesNum = driver.findElement(By.id("input_51")); //не сработал
         instancesNum.sendKeys("4");
         Thread.sleep(10000);
 
@@ -53,10 +53,10 @@ public class Task {
         selectOS.click();
 
         Thread.sleep(2000);
-        driver.quit();
+        //driver.quit();
 
 
-        //Завтра попробовать полностью заполнить списки в Калькуляторе, устранить проблему с See Pricing, Compute Engine
+        //Завтра попробовать полностью заполнить списки в Калькуляторе, Compute Engine
 
 
     }

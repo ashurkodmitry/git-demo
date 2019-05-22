@@ -27,11 +27,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/Task.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-88">
-              <caret line="12" column="48" lean-forward="true" selection-start-line="7" selection-start-column="4" selection-end-line="12" selection-end-column="48" />
+            <state relative-caret-position="833">
+              <caret line="58" column="71" selection-start-line="58" selection-start-column="71" selection-end-line="58" selection-end-column="71" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -39,7 +39,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/LoserTask.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="323">
@@ -64,8 +64,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/test/java/Task.java" />
         <option value="$PROJECT_DIR$/src/test/java/LoserTask.java" />
+        <option value="$PROJECT_DIR$/src/test/java/Task.java" />
       </list>
     </option>
   </component>
@@ -87,6 +87,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -116,7 +117,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -139,7 +139,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.LoserTask">
+  <component name="RunManager" selected="Application.Task">
     <configuration name="LoserTask" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="LoserTask" />
       <module name="webdriver" />
@@ -156,8 +156,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.LoserTask" />
         <item itemvalue="Application.Task" />
+        <item itemvalue="Application.LoserTask" />
       </list>
     </recent_temporary>
   </component>
@@ -174,16 +174,17 @@
       <workItem from="1558466802821" duration="2010000" />
       <workItem from="1558469603683" duration="6621000" />
       <workItem from="1558495240130" duration="3466000" />
+      <workItem from="1558549029527" duration="5369000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12097000" />
+    <option name="totallyTimeSpent" value="17466000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1296" height="1000" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49945116" visible="true" weight="0.25809062" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49945116" visible="true" weight="0.26213592" />
       <window_info id="Structure" order="1" sideWeight="0.5009141" side_tool="true" weight="0.25416666" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -257,20 +258,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/Task.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/LoserTask.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-88">
-          <caret line="12" column="48" lean-forward="true" selection-start-line="7" selection-start-column="4" selection-end-line="12" selection-end-column="48" />
+        <state relative-caret-position="323">
+          <caret line="19" column="49" selection-start-line="19" selection-start-column="49" selection-end-line="19" selection-end-column="49" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/LoserTask.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/Task.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="49" selection-start-line="19" selection-start-column="49" selection-end-line="19" selection-end-column="49" />
+        <state relative-caret-position="833">
+          <caret line="58" column="71" selection-start-line="58" selection-start-column="71" selection-end-line="58" selection-end-column="71" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

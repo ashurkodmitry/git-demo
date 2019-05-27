@@ -1,9 +1,12 @@
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.util.ArrayList;
 
 public class Task {
 
@@ -41,16 +44,16 @@ public class Task {
 
         //risky point
         //driver.switchTo().window("ComputeEngineForm"); посмотреть название формы
-        WebDriverWait wait = new WebDriverWait(driver,10);
-        wait.until(ExpectedConditions.presenceOfElementLocated(By.id("input_51")));
-        WebElement instancesNum = driver.findElement(By.id("input_51")); //не сработал
-        instancesNum.sendKeys("4");
-        Thread.sleep(10000);
+        //WebDriverWait wait = new WebDriverWait(driver,10);
+        //wait.until(ExpectedConditions.presenceOfElementLocated(By.id("input_51")));
+        //WebElement instancesNum = driver.findElement(By.id("input_51")); //не сработал
+        //instancesNum.sendKeys("4");
+        //Thread.sleep(10000);
 
         //risky point
 
-        WebElement selectOS = driver.findElement(By.xpath("//*[@id='select_value_label_44']"));
-        selectOS.click();
+        //WebElement selectOS = driver.findElement(By.xpath("//*[@id='select_value_label_44']"));
+        //selectOS.click();
 
         Thread.sleep(2000);
         //driver.quit();
@@ -58,7 +61,19 @@ public class Task {
 
         //Завтра попробовать полностью заполнить списки в Калькуляторе, Compute Engine
 
-
+        //получаем id окна
+        String winHandleBefore = driver.getWindowHandle();
+        //открываем новое
+        driver.findElement(By.cssSelector("body")).sendKeys(Keys.CONTROL + "t");
+        //в новом окне
+        ArrayList tabs = new ArrayList(driver.getWindowHandles());
+        System.out.println(tabs.size());
+        driver.switchTo().window((String) tabs.get(0));
+        driver.get("https://10minutemail.com");
+        //возвращаемся в предыдущее окно
+        driver.switchTo().window(winHandleBefore);
+        driver.findElement(By.cssSelector("body")).sendKeys(Keys.CONTROL +"\t");
+        driver.switchTo().defaultContent();
     }
 }
 

@@ -36,6 +36,17 @@ public class Task {
         WebElement clickCalculator = driver.findElement(By.xpath("//a[text()='Calculators']"));
         clickCalculator.click();
 
+        WebElement outerFrame = driver.findElement(By.xpath("//*[@ng-controller='ListingCtrl as listingCtrl']"));
+        driver.switchTo().frame(outerFrame);
+        Thread.sleep(2000);
+
+        WebElement midFrame = driver.findElement(By.id("mainForm"));
+        driver.switchTo().frame(midFrame);
+        Thread.sleep(2000);
+
+        WebElement innerFrame = driver.findElement(By.xpath("//*[@class='compute-engine-block']"));
+        driver.switchTo().frame(innerFrame);
+        Thread.sleep(2000);
 
         //risky point
 
@@ -44,10 +55,10 @@ public class Task {
 
         //risky point
         //driver.switchTo().window("ComputeEngineForm"); посмотреть название формы
-        //WebDriverWait wait = new WebDriverWait(driver,10);
-        //wait.until(ExpectedConditions.presenceOfElementLocated(By.id("input_51")));
-        //WebElement instancesNum = driver.findElement(By.id("input_51")); //не сработал
-        //instancesNum.sendKeys("4");
+        WebDriverWait wait = new WebDriverWait(driver,10);
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.id("input_51")));
+        WebElement instancesNum = driver.findElement(By.id("input_51")); //не сработал
+        instancesNum.sendKeys("4");
         //Thread.sleep(10000);
 
         //risky point
